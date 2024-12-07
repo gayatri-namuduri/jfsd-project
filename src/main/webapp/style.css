@@ -1,0 +1,197 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 1rem;
+}
+* h4{
+	font-style: oblique;
+	font-weight: 800;
+	text-decoration: underline;
+	text-align: center;
+}
+* table th{
+	background-color: #034694;
+}
+
+
+/* Header Styles */
+#header {
+  background-color: #0a2351; /* Dark gray background for a more professional tone */
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  height: 90px;
+  top: 0;
+  left: 0;
+  transition: padding 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Heading in the header */
+#header h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600; /* More weight for better readability */
+  text-align: center;
+  flex-grow: 1;
+  font-family: 'Courier New';
+  font-weight: bolder;
+  font-size: 50px;
+}
+
+/* When the sidebar is open, adjust the header size */
+.sidebar-open #header {
+  padding: 15px 10px;
+}
+
+/* Sidebar styles */
+.sidebar {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 80px;
+  left: 0;
+  background-color: #f8f9fa; /* Light background for sidebar */
+  overflow-x: hidden;
+  transition: width 0.3s ease-in-out;
+  padding-top: 60px;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Sidebar styles when closed */
+.sidebar.closed {
+  width: 0;
+}
+
+/* Sidebar links */
+.sidebar a {
+  padding: 12px 20px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #495057; /* Darker text for better contrast */
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: #004687; /* Bootstrap's primary color */
+  color: white;
+  border-radius: 5px;
+}
+
+/* Sidebar icons */
+.sidebar a i {
+  margin-right: 12px;
+}
+
+/* Close button in the sidebar */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 30px;
+  color: #495057;
+  background: none;
+  border: none;
+}
+
+/* Button to open the sidebar */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color:#0a2351; /* Match with header color */
+  padding: 8px 16px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+/* Hide the open button when the sidebar is open */
+.openbtn.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* On hover, change the button background */
+.openbtn:hover {
+  background-color: #0a2351;
+}
+
+/* Main content section */
+#main {
+  transition: margin-left 0.3s ease;
+  margin-left: 250px;
+  padding: 30px;
+  padding-top:120px;
+}
+
+#main1 {
+  padding: 30px;
+  padding-top:120px;
+}
+
+#main1 a{
+  padding: 20px;
+  padding-top:10px;
+  padding-bottom: 10px;
+  
+}
+
+/* On smaller screens, adjust sidebar styles */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 0;
+  }
+
+  .openbtn {
+    visibility: visible;
+  }
+
+  #main {
+    margin-left: 0;
+    padding-top: 60px;
+  }
+
+  .sidebar-open #header {
+    padding: 10px 20px;
+  }
+}
+
+/* For larger screens with a fixed sidebar */
+@media screen and (min-width: 1024px) {
+  #main {
+    margin-left: 250px;
+  }
+
+  .sidebar {
+    width: 250px;
+  }
+}
+
+/* Footer Styles */
+#footer {
+  background-color: #f8f9fa;
+  color: #495057;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
