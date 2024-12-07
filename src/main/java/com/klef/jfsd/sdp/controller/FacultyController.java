@@ -184,7 +184,7 @@ public class FacultyController
 			facultyService.addassignment(a); 
 	    }
 		
-		ModelAndView mv = new ModelAndView("addcassignmentsuccess");
+		ModelAndView mv = new ModelAndView("addassignmentsuccess");
 		String msg = "Assignments uploaded successfully";
 		mv.addObject("message",msg);
 		return mv;
